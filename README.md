@@ -1,6 +1,10 @@
 # PlanningPoker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+A Progressive Web App that acts as Planning Poker deck during your scrum sessions.
+
+Written with Angular Framework.
+
+**Note: Project just started and only has a skeleton for now.**
 
 ## Development server
 
