@@ -12,7 +12,9 @@ import { environment } from '../environments/environment';
 
 import { MaterialExporterModule } from './material-exporter.module';
 import { CoreModule } from './core/core.module';
-import { SharedModule } from './share/shared.module';
+import { SharedModule } from './shared/shared.module';
+
+import { PokerModule } from './poker/poker.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { SharedModule } from './share/shared.module';
     MaterialExporterModule,
 
     // Features Modules
+    PokerModule,
 
     // App Routing Module
     AppRoutingModule,
