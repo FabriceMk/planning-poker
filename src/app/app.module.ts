@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 
 import { MaterialExporterModule } from './material-exporter.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './share/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { MaterialExporterModule } from './material-exporter.module';
     BrowserAnimationsModule,
 
     // Base modules
+    CoreModule,
+    SharedModule,
     MaterialExporterModule,
 
     // Features Modules
