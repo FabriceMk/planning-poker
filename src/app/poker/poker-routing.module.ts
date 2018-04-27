@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DeckComponent } from './deck/deck.component';
 
 const pokerRoutes: Routes = [
-  { path: 'deck',  component: DeckComponent }
+  { path: 'deck/:id',  component: DeckComponent }
 ];
 
 @NgModule({
