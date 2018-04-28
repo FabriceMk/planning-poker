@@ -14,6 +14,8 @@ export class DeckService {
     mockDeck.id = 'mockDeck';
     mockDeck.name = 'Mock Deck';
 
+    mockDeck.cards = new Array<Card>();
+
     mockDeck.cards.push(new Card('1'));
     mockDeck.cards.push(new Card('2'));
     mockDeck.cards.push(new Card('3'));

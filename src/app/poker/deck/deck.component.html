@@ -1,3 +1,5 @@
-<div class="deck-grid" *ngIf="deck">
-  <mat-card *ngFor="let card of deck.cards">card.value</mat-card>
-</div>
+<mat-grid-list class="deck-grid" *ngIf="deck" cols="2" >
+    <mat-grid-tile *ngFor="let card of deck.cards">
+      <mat-card >{{card.value}}</mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
