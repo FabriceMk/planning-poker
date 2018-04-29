@@ -1,0 +1,20 @@
+@import 'metrics';
+
+.container {
+  padding: $magic-spacing;
+  min-height: 100%;
+  width: 100%;
+}
+
+.deck-card {
+  margin: $magic-spacing/2;
+  text-align: center;
+  min-height: 128px;
+  min-width: 72px;
+  background-color: peachpuff;
+
+  .card-value {
+    font-size: 32px;
+    height: 100%;
+  }
+}

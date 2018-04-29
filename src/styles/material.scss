@@ -1,0 +1,28 @@
+@import 'colors';
+@import 'metrics';
+
+/** Official Material Design styles */
+
+/** Lists */
+.primary-text {
+  color: $black_87;
+  font-size: $list-item-font-size;
+}
+
+.secondary-text {
+  color: $black_54;
+  font-size: $list-item-font-size - 2px;
+}
+
+/* Angular Material customizations */
+mat-card {
+  mat-card-actions {
+    .mat-button {
+      color: $primary;
+    }
+  }
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
