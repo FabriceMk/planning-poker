@@ -20,6 +20,13 @@ export class DeckService {
     mockDeck.cards.push(new Card('2'));
     mockDeck.cards.push(new Card('3'));
     mockDeck.cards.push(new Card('5'));
+    mockDeck.cards.push(new Card('8'));
+    mockDeck.cards.push(new Card('13'));
+    mockDeck.cards.push(new Card('20'));
+    mockDeck.cards.push(new Card('40'));
+    mockDeck.cards.push(new Card('100'));
+    mockDeck.cards.push(new Card('∞'));
+    mockDeck.cards.push(new Card('?'));
 
     const subject = new BehaviorSubject<Deck>(mockDeck);
     return subject.asObservable();

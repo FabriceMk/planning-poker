@@ -13,3 +13,16 @@
   color: $black_54;
   font-size: $list-item-font-size - 2px;
 }
+
+/* Angular Material customizations */
+mat-card {
+  mat-card-actions {
+    .mat-button {
+      color: $primary;
+    }
+  }
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
