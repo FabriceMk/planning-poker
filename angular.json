@@ -16,11 +16,6 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
-            },
             "assets": [
               "src/assets",
               "src/favicon.ico"
@@ -29,6 +24,11 @@
               "src/styles.scss",
               "src/planning-poker-theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -85,7 +85,12 @@
             "assets": [
               "src/assets",
               "src/favicon.ico"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
           }
         },
         "lint": {

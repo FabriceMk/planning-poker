@@ -32,7 +32,7 @@ export class DeckComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.pipe(
+    this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
       this.deckService.getDeck(params['id']))
     ).subscribe(
