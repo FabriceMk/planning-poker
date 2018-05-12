@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/finally';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 
 import { DeckService } from '../shared/deck.service';
 import { Deck } from '../shared/models/deck.model';
@@ -33,17 +32,17 @@ export class DeckComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params
-      .switchMap((params: ParamMap) => this.deckService.getDeck(params['id']))
-      .finally(() => this.isLoading = false)
-      .subscribe(
-        deck => {
-          this.deck = deck;
-        },
-        error => {
-          this.hasError = true;
-        }
-      );
+    this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+      this.deckService.getDeck(params['id']))
+    ).subscribe(
+      deck => {
+        this.deck = deck;
+      },
+      error => {
+        this.hasError = true;
+      }
+    );
   }
 
 }
