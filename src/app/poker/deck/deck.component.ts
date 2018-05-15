@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 import { Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 
 import { DeckService } from '../shared/deck.service';
 import { Deck } from '../shared/models/deck.model';
@@ -32,10 +31,9 @@ export class DeckComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.paramMap.pipe(
-      switchMap((params: ParamMap) =>
-      this.deckService.getDeck(params['id']))
-    ).subscribe(
+    const deckId = this.route.snapshot.paramMap.get('id');
+
+    this.deckService.getDeck(deckId).subscribe(
       deck => {
         this.deck = deck;
       },
