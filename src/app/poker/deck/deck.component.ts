@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-
-import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { DeckService } from '../shared/deck.service';
 import { Deck } from '../shared/models/deck.model';
@@ -37,10 +35,9 @@ export class DeckComponent implements OnInit {
       deck => {
         this.deck = deck;
       },
-      error => {
+      _error => {
         this.hasError = true;
       }
     );
   }
-
 }

@@ -10,7 +10,7 @@ import { Deck } from '../shared/models/deck.model';
 const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 const activatedRouteStub = new ActivatedRouteStub();
 const deckServiceStub = {
-  getDeck: (deckId => new Deck())
+  getDeck: (_deckId => new Deck())
  };
 
 describe('DeckComponent', () => {
