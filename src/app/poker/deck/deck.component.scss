@@ -1,8 +1,13 @@
 @import 'metrics';
 
 .container {
+  height: 100%;
+}
+
+.cards-list {
+  position: absolute;
   padding: $magic-spacing;
-  min-height: 100%;
+  //min-height: 100%;
   width: 100%;
 }
 
@@ -18,3 +23,24 @@
     height: 100%;
   }
 }
+
+.zoom-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  .main-card {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+    background-color: deepskyblue;
+
+    .card-value {
+      font-size: 32px;
+      height: 100%;
+    }
+  }
+}
+
+
