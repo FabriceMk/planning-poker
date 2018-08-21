@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { DeckService } from '../shared/deck.service';
 import { Deck } from '../shared/models/deck.model';
+import { Card } from '../shared/models/card.model';
 
 /**
  * Component to display a deck.
@@ -15,6 +16,12 @@ import { Deck } from '../shared/models/deck.model';
 export class DeckComponent implements OnInit {
   /** The current deck. */
   deck: Deck;
+
+  /** Flag to display the Hero Card */
+  heroCardDisplayed: boolean;
+
+  /** Current selected Hero Card */
+  currentHeroCard: Card;
 
   /** If the deck is currently loading. */
   isLoading: boolean;
@@ -39,5 +46,18 @@ export class DeckComponent implements OnInit {
         this.hasError = true;
       }
     );
+
+    this.heroCardDisplayed = false;
+  }
+
+  /** Displays the Hero Card */
+  displayHeroCard(card: Card): void {
+    this.currentHeroCard = card;
+    this.heroCardDisplayed = true;
+  }
+
+  /** Hides the Hero Card */
+  hideHeroCard(): void {
+    this.heroCardDisplayed = false;
   }
 }

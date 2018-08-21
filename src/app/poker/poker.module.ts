@@ -7,6 +7,7 @@ import { PokerRoutingModule } from './poker-routing.module';
 
 import { DeckComponent } from './deck/deck.component';
 import { DeckService } from './shared/deck.service';
+import { HeroCardComponent } from './hero-card/hero-card.component';
 
 /**
  * Module for everything related to dances
@@ -17,7 +18,10 @@ import { DeckService } from './shared/deck.service';
     MaterialExporterModule,
     PokerRoutingModule
   ],
-  declarations: [DeckComponent],
+  declarations: [
+    DeckComponent,
+    HeroCardComponent
+  ],
   exports: [],
   providers: [
     DeckService
